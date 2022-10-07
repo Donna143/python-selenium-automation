@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Pasta Carbonara Recipe</title>
+    <link rel="stylesheet" type="text/css" href="style_hw.css">
 </head>
 <body>
-<div>
+<div class="header">
     <h1><b>How to cook Pasta Carbonara</b></h1>
-    <h3><b>Ingredients:</b></h3>
+</div>
+<div class="section">
+    <h3>Ingredients:</h3>
     <table>
         <tr>
             <td><img src="Pasta-Carbonara-Recipe-46.jpg" width="100px"></td>
@@ -25,8 +28,8 @@
         </tr>
     </table>
 </div>
-<div>
-    <h3><b>Instructions:</b></h3>
+<div class="section" id="steps">
+    <h3>Instructions:</h3>
     <ol>
         <li>Add bacon and 1/2 cup of water to a large non-stick skillet and bring to a simmer over medium-high heat.</li>
         <li>Allow to simmer until water evaporates about 6-7 minutes, then reduce heat to medium-low and continue to cook until bacon is brown and crisp, about 6-8 minutes longer.</li>
@@ -38,6 +41,29 @@
         <li>Let pasta rest, tossing frequently, 2-4 minutes until sauce has thickened slightly and coats pasta. Thin with remaining 1/2 cup hot pasta water as needed. Serve immediately topped with additional parmesan and parsley.</li>
     </ol>
     <br>
+</div>
+<div class="section">
+    <h4>Share your feedback!</h4>
+    <form>
+        <table>
+            <tr>
+                <td>Recipe rating: </td>
+                <td><input type="radio" name="rating"> 1
+                    <input type="radio" name="rating"> 2
+                    <input type="radio" name="rating"> 3
+                    <input type="radio" name="rating"> 4
+                    <input type="radio" name="rating"> 5</td>
+            </tr>
+            <tr>
+                <td>Comment: </td>
+                <td><<textarea name="comment"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="right"><input type="submit"></td>
+            </tr>
+        </table>
+    </form>
 </div>
 </body>
 </html>

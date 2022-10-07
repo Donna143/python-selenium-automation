@@ -1,0 +1,29 @@
+
+body {
+    margin: 0px;
+    background-image: url(Pasta2.jpg);
+    font-family: "Book Antiqua";
+    color: firebrick;
+}
+
+h3 {
+    font-size: 150%;
+}
+.header {
+    background-color: firebrick;
+    color: ivory;
+   }
+
+.header {
+    text-align: center;
+}
+
+.section {
+    background-color: ivory;
+    padding: 5px;
+}
+
+#steps {
+    background-image: url('checker.png');
+
+}
