@@ -1,9 +1,11 @@
 from selenium.webdriver.common.by import By
 from behave import given, when, then
+from selenium.webdriver.support import expected_conditions as EC
 
 HAM_MENU = (By.ID, 'nav-hamburger-menu')
 FOOTER_LINKS = (By.CSS_SELECTOR, '.navFooterDescItem a')
 BEST_SELLERS = (By.CSS_SELECTOR, "[href='/gp/bestsellers/?ref_=nav_cs_bestsellers']")
+SIGN_IN = (By.CSS_SELECTOR, '#nav-signin-tooltip .nav-action-button')
 
 
 @given('Open Amazon page')
@@ -25,6 +27,12 @@ def click_returns_orders(context):
 @when('Click on cart')
 def click_cart(context):
     context.driver.find_element(By.CSS_SELECTOR, '#nav-cart').click()
+
+
+@when('Click on button from SignIn popup')
+def click_sign_in(context):
+    e = context.driver.wait.until(EC.element_to_be_clickable(SIGN_IN), message='Sign in not clickable')
+    e.click()
 
 
 @then('Verify hamburger menu is present')
