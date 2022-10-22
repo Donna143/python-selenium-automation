@@ -1,3 +1,5 @@
+from time import sleep
+
 from selenium.webdriver.common.by import By
 from behave import given, when, then
 from selenium.webdriver.support import expected_conditions as EC
@@ -33,6 +35,22 @@ def click_cart(context):
 def click_sign_in(context):
     e = context.driver.wait.until(EC.element_to_be_clickable(SIGN_IN), message='Sign in not clickable')
     e.click()
+
+
+@when('Wait for {sec} sec')
+def wait_sec(context, sec):
+    sleep(int(sec))
+
+
+@then('Verify Sign In is clickable')
+def verify_sign_in_clickable(context):
+    context.driver.wait.until(EC.element_to_be_clickable(SIGN_IN), message='Sign in not clickable')
+
+
+@then('Verify Sign In disappears')
+def verify_sign_in_btn_disappear(context):
+    context.driver.wait.until(EC.invisibility_of_element_located(SIGN_IN), message='Sign in is still visible')
+    # context.driver.wait.until_not(EC.presence_of_element_located(SIGN_IN), message='Sign in is still visible')
 
 
 @then('Verify hamburger menu is present')

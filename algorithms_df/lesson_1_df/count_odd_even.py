@@ -14,6 +14,20 @@ def count_odd_even(n):
     return odd_count, even_count
 
 
+def count_odd_even2(n):
+    odds = 0
+    evens = 0
+    while n > 0:
+        current_digit = n % 10
+        if current_digit % 2:
+            odds = odds + 1
+        else:
+            evens = evens + 1
+        n = n // 10
+    return [odds, evens]
+
+
+print(count_odd_even2(34560))
 print(count_odd_even(34560))
 
 

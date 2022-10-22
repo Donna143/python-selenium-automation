@@ -10,4 +10,11 @@ def sum_of_numbers(n):
     return result
 
 
+def sum_to_n(n):
+    result = (n*(n+1))/2
+    return result
+
+
 print(sum_of_numbers(5))
+print(sum_to_n(5))
+

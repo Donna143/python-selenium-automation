@@ -23,3 +23,8 @@ Feature: Tests for Amazon search
     | mug           | "mug"              |
     | dress         | "dress"            |
 
+
+Scenario: Verify that user can see product names and images
+  Given Open Amazon page
+  When Search for coffee
+  Then Verify that every product has a name and an image

@@ -5,3 +5,9 @@ Feature: Tests for Amazon Best Sellers page
     Given Open Amazon page
     When Click on Best Sellers
     Then Verify that header has 5 links
+
+
+  Scenario: Correct page opens when clicking each header link
+    Given Open Amazon page
+    When Click on Best Sellers
+    Then Click each header link and verify correct page opens
