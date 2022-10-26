@@ -1,3 +1,4 @@
+# O(1)
 def is_palindrome(s):
     return s[::-1] == s
 
