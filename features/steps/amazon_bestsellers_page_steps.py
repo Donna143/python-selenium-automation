@@ -16,10 +16,14 @@ def verify_link_count(context, expected_link_count):
 def click_header_link_opens_correct_page(context):
     links = context.driver.find_elements(*HEADER_LINKS)
     print(links)
-    for link in links:
-        print(link)
-        link.click()
-        assert link.text in context.driver.find_element(*HEADER_TEXT).text
+    for i in range(len(links)):
+        link_to_click = context.driver.find_elements(*HEADER_LINKS)[i]
+        link_text = link_to_click.text
+        link_to_click.click()
+        header_text = context.driver.find_element(*HEADER_TEXT).text
+        assert link_text in header_text, f'Expected {link_text} to be in {header_text}'
+
+
 
 
 
