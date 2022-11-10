@@ -13,6 +13,8 @@ def below_mean(arr):
         total = total + num
     mean = total / len(arr)
 
+    # mean = sum(arr) / len(arr)
+
     result_arr = []
     for num in arr:
         if num < mean:

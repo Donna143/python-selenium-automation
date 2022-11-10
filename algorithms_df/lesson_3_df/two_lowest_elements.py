@@ -7,7 +7,8 @@
 
 def two_lowest(arr):
     arr.sort()
-    return arr[0], arr[1]
+    return arr[:2]
+    # return arr[0], arr[1]
 
 
 test_arr = [198, 3, 4, 9, 10, 9, 2]

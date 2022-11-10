@@ -8,10 +8,11 @@ def browser_init(context):
     """
     :param context: Behave context
     """
-    context.driver = webdriver.Chrome(
-        executable_path='C:/Users/thebe/Documents/Careerist/Automation/python-selenium-automation/chromedriver.exe')
-    # context.browser = webdriver.Safari()
-    # context.browser = webdriver.Firefox()
+    # context.driver = webdriver.Chrome(
+    #     executable_path='C:/Users/thebe/Documents/Careerist/Automation/python-selenium-automation/chromedriver.exe')
+    # context.driver = webdriver.Safari()
+    context.driver = webdriver.Firefox(
+        executable_path='C:/Users/thebe/Documents/Careerist/Automation/python-selenium-automation/geckodriver.exe')
 
     context.driver.maximize_window()
     context.driver.implicitly_wait(4)
