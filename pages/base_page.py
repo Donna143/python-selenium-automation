@@ -1,3 +1,5 @@
+
+from support.logger import logger
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -12,6 +14,7 @@ class Page:
     def open_url(self, end_url=''):
         url = f'{self.base_url}{end_url}'
         print(f'Opening URL: {url}')
+        logger.info(f'Opening URL: {url}')
         self.driver.get(url)
 
     def find_element(self, *locator):
